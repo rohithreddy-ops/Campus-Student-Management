@@ -38,9 +38,23 @@ def initialize_database():
             roll_number  TEXT NOT NULL UNIQUE,
             department   TEXT NOT NULL,
             year         INTEGER NOT NULL,
-            email        TEXT
+            email        TEXT,
+            phone        TEXT,
+            cgpa         REAL
         )
     """)
+
+    conn.commit()
+
+    # --- Migration for databases created by an earlier version of this
+    # project (Module 1) that don't yet have phone/cgpa columns ---
+    cursor.execute("PRAGMA table_info(students)")
+    existing_columns = [row[1] for row in cursor.fetchall()]
+
+    if "phone" not in existing_columns:
+        cursor.execute("ALTER TABLE students ADD COLUMN phone TEXT")
+    if "cgpa" not in existing_columns:
+        cursor.execute("ALTER TABLE students ADD COLUMN cgpa REAL")
 
     conn.commit()
     conn.close()
