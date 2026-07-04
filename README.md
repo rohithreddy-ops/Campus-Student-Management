@@ -1,4 +1,4 @@
-# 🎓 Smart Campus Management System
+#  Smart Campus Management System
 
 A console-based Student Management System developed using **Python** and **SQLite**. The application helps manage student records with features such as adding, updating, searching, deleting, and exporting student information.
 
