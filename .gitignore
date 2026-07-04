@@ -1,13 +1,51 @@
-# Python cache files
+# ----------------------------
+# Python
+# ----------------------------
 __pycache__/
-*.pyc
+*.py[cod]
+*$py.class
 
-# SQLite database
-campus.db
-
-# Virtual environment (if you use one later)
+# ----------------------------
+# Virtual Environment
+# ----------------------------
 venv/
+env/
 .venv/
 
-# VS Code settings (optional)
+# ----------------------------
+# VS Code
+# ----------------------------
 .vscode/
+
+# ----------------------------
+# PyCharm
+# ----------------------------
+.idea/
+
+# ----------------------------
+# Database
+# ----------------------------
+campus.db
+*.sqlite3
+
+# ----------------------------
+# Exported Files
+# ----------------------------
+*.csv
+
+# ----------------------------
+# Environment Variables
+# ----------------------------
+.env
+
+# ----------------------------
+# Logs
+# ----------------------------
+*.log
+
+# ----------------------------
+# Operating System Files
+# ----------------------------
+.DS_Store
+Thumbs.db
+desktop.ini
